@@ -13,7 +13,7 @@ const Search = ({ getQuery }) => {
                 <input 
                     type='text' 
                     className='form-control' 
-                    placeholder='Search Superheroes/Villians..'
+                    placeholder='Search Superheroes..'
                     value={text}
                     onChange={(e) => onChange(e.target.value)}
                     />
