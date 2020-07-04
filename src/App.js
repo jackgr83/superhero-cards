@@ -32,7 +32,7 @@ const App = () => {
   }, [query])
 
   const superheroes = <SuperheroGrid isLoading={isLoading} items={items} />
-  const error = 'none found'
+  const error = ''
 
   return (
     <div className="Container">

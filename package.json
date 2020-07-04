@@ -20,6 +20,7 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
+  "proxy": "https://stunning-kobuk-valley-23652.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
