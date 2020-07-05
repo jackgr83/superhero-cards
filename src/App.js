@@ -5,8 +5,6 @@ import Search from './components/ui/Search'
 import './App.css';
 import axios from 'axios';
 
-console.log(process.env.REACT_APP_API_KEY);
-
 const App = () => {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -16,13 +14,10 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const result = await axios(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${process.env.REACT_APP_API_KEY}/search/${query}_`)
-        
-        console.log(result.data.results)
+        const result = await axios(`https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${process.env.REACT_APP_API_KEY}/search/${query}_`)       
         setItems(result.data.results)
         setIsLoading(false)
       } catch (err) {
-        console.log('ERROR!')
         setIsLoading(true)
         setIsError(true)
       }
